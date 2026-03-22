@@ -1,0 +1,41 @@
+{
+  "skill_name": "phd-research-copilot",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "请帮我用/精读命令分析这篇论文：Vaswani et al. (2017) Attention Is All You Need. 这是一篇关于Transformer架构的开创性论文，发表在NeurIPS 2017。论文提出了完全基于注意力机制的序列转换模型，取代了传统的RNN和CNN架构。",
+      "expected_output": "生成一份符合模板A的深度文献精读笔记，包含基本信息、核心概要、引导性问答、研究背景、创新点、方法论、实验结果、结论展望、结构论证要点和个人启发等十个部分。文件应保存到Literature_Notes目录。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我已经完成了几篇文献的精读，现在请使用/综述命令帮我生成一份阶段性综述。",
+      "expected_output": "读取Literature_Notes目录下的所有Markdown文件，进行全局交叉对比分析，识别技术演进路径和流派差异，生成符合模板C的综述文档，保存为Literature_Synthesis.md。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "请使用/开题命令帮我生成博士论文课题框架。我的研究方向是基于深度学习的计算机视觉，特别关注医学图像分割领域。初步想法是结合Transformer和CNN的优势来解决小样本医学图像分割问题。",
+      "expected_output": "读取Literature_Synthesis.md（如果存在），结合用户提供的初步灵感，生成符合模板D的博士论文大纲，包含五个核心部分：立题与破局、基石与冷启动、多模态融合、物理第一性原理、工程闭环验证，以及小论文发表策略。保存为PhD_Grand_Framework.md。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我刚完成了一篇文献的精读笔记，请使用/入库命令将其添加到文献整合表中。",
+      "expected_output": "提取最新精读笔记的核心元数据，按模板B格式化为表格行，静默追加到Decoding_Matrix.md文件末尾。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "请使用/设题命令将我的课题设定为：面向少样本场景的医学图像分割的物理感知深度学习模型研究",
+      "expected_output": "将用户输入的课题名称赋值给Current_Topic变量，通知用户系统已进入【靶向模式】，后续所有分析将围绕该课题进行。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "我现在处于靶向模式，Current_Topic是'多模态融合的目标检测'。请帮我精读这篇论文：Chen et al. (2023) Multimodal Fusion for 3D Object Detection，论文提出了一个结合RGB图像和点云数据的多模态融合框架。",
+      "expected_output": "生成深度文献精读笔记，在引导性问答和个人启发部分强制将该文献与'多模态融合的目标检测'课题进行对比分析，讨论该文献方法能否解决课题痛点、局限性是否证明课题先进性、实验指标能否被借鉴等。",
+      "files": []
+    }
+  ]
+}
